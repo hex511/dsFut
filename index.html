@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>DSFUT PLAYER PICKER</title>
+</head>
+
+<body>
+  <h2>DSFUT player picker</h2>
+  Minimum player price: <input type="text" id="min" value="">
+  Maximum player price: <input type="text" id="max" value="">
+  <br><br><button onclick="myStart()">Start picking</button>
+  <button onclick="myStop()">Stop picking</button>
+  <p id="status"></p>
+  <p id="list"></p>
+
+  <script>
+
+
+    let id = '38274';
+    let secret = '2e534b6f3492216962846e18c9c64835';
+
+    async function picker() {
+      let tt = Date.now();
+      let signature = md5(id + secret + tt);
+      var min = document.getElementById("min").value;
+      var max = document.getElementById("max").value;
+      let url = `https://dsfut.net/api/22/ps/38274/${tt}/${signature}/?min_buy=${min}&max_buy=${max}`;
+      let response = await fetch(url);
+
+      let commits = await response.text(); // read response body and parse as JSON
+
+
+      document.querySelector('#list').innerHTML += '<br>' + commits + ' - ' + signature;
+    }
+
+    function myStart() {
+      myInterval = setInterval(picker, 1000);
+      document.querySelector('#status').innerHTML = 'status: picking...';
+    }
+    function myStop() {
+      clearInterval(myInterval);
+      document.querySelector('#status').innerHTML = 'status: stopped!';
+    }
+
+  </script>
+  <script src="http://www.myersdaily.org/joseph/javascript/md5.js"></script>
+</body>
+
+</html>
