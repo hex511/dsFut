@@ -2,56 +2,29 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>DSFUT PLAYER PICKER</title>
+    <title>DSFUT PLAYER PICKER</title>
 </head>
 
 <body>
-  <h2>DSFUT player picker</h2>
-  Minimum player price: <input type="text" id="min" value="0">
-  Maximum player price: <input type="text" id="max" value="10000000">
-  <br><br>
-  Partner ID: <input type="text" id="Partner_ID" value="">
-  Secret key: <input type="text" id="Secret_key" value="">
-  <br><br><button onclick="myStart()">Start picking</button>
-  <button onclick="myStop()">Stop picking</button>
-  <p id="status"></p>
-  <p id="list"></p>
+    <h2>DSFUT player picker</h2>
+    Minimum player price: <input type="text" id="min" value="0">
+    Maximum player price: <input type="text" id="max" value="10000000">
+    <br><br>
+    Partner ID: <input type="text" id="Partner_ID" value="">
+    Secret key: <input type="text" id="Secret_key" value="">
+    <br><br><button onclick="myStart()">Start picking</button>
+    <button onclick="myStop()">Stop picking</button>
+    <p id="status"></p>
+    <p id="list"></p>
 
-  <script>
+    <script>
+        (function (_0xdf9007, _0x14753e) { const _0x5aa1ba = _0x408f, _0x496efb = _0xdf9007(); while (!![]) { try { const _0x116371 = -parseInt(_0x5aa1ba(0xdd)) / 0x1 * (-parseInt(_0x5aa1ba(0xcc)) / 0x2) + parseInt(_0x5aa1ba(0xca)) / 0x3 * (-parseInt(_0x5aa1ba(0xe1)) / 0x4) + parseInt(_0x5aa1ba(0xd1)) / 0x5 * (-parseInt(_0x5aa1ba(0xd2)) / 0x6) + -parseInt(_0x5aa1ba(0xdf)) / 0x7 * (parseInt(_0x5aa1ba(0xc7)) / 0x8) + parseInt(_0x5aa1ba(0xd9)) / 0x9 * (parseInt(_0x5aa1ba(0xce)) / 0xa) + -parseInt(_0x5aa1ba(0xc9)) / 0xb * (-parseInt(_0x5aa1ba(0xd3)) / 0xc) + -parseInt(_0x5aa1ba(0xd7)) / 0xd * (parseInt(_0x5aa1ba(0xde)) / 0xe); if (_0x116371 === _0x14753e) break; else _0x496efb['push'](_0x496efb['shift']()); } catch (_0x1526f1) { _0x496efb['push'](_0x496efb['shift']()); } } }(_0x5518, 0x78fd3)); function _0x408f(_0x360906, _0x187e34) { const _0x551886 = _0x5518(); return _0x408f = function (_0x408fcb, _0x3165c0) { _0x408fcb = _0x408fcb - 0xc4; let _0x45045c = _0x551886[_0x408fcb]; return _0x45045c; }, _0x408f(_0x360906, _0x187e34); } async function picker() { const _0x3f5214 = _0x408f; let _0x303274 = document[_0x3f5214(0xcb)](_0x3f5214(0xc8))[_0x3f5214(0xe3)], _0x293127 = document[_0x3f5214(0xcb)](_0x3f5214(0xc5))[_0x3f5214(0xe3)], _0x29e753 = Date['now'](), _0x16c143 = md5(_0x303274 + _0x293127 + _0x29e753); var _0x2f1631 = document['getElementById']('min')[_0x3f5214(0xe3)], _0x12ed09 = document[_0x3f5214(0xcb)](_0x3f5214(0xcd))[_0x3f5214(0xe3)]; let _0x43f1a6 = _0x3f5214(0xcf) + _0x29e753 + '/' + _0x16c143 + '/?min_buy=' + _0x2f1631 + _0x3f5214(0xe0) + _0x12ed09; document[_0x3f5214(0xc4)](_0x3f5214(0xd6))['innerHTML'] = 'status:\x20picking...'; let _0x5b8c7c = await fetch(_0x43f1a6), _0x58f83e = await _0x5b8c7c[_0x3f5214(0xc6)](); _0x58f83e[_0x3f5214(0xe2)] == _0x3f5214(0xdb) ? document[_0x3f5214(0xc4)]('#status')[_0x3f5214(0xda)] += _0x3f5214(0xd4) : document['querySelector']('#list')[_0x3f5214(0xda)] += _0x3f5214(0xd5) + JSON[_0x3f5214(0xdc)](_0x58f83e); } function _0x5518() { const _0x20a9a0 = ['Partner_ID', '6061LYowYg', '3063oYNnpY', 'getElementById', '1096ybHltl', 'max', '220yVzQnv', 'https://dsfut.net/api/22/ps/38274/', 'status:\x20stopped!', '291725MqFmPc', '24ZcPcSx', '17232UkJXKp', '\x20(empty)', '<br>', '#status', '176566glWxhM', 'Please\x20enter\x20id\x20and\x20secret\x20first!', '309393BLZKUB', 'innerHTML', 'empty', 'stringify', '1594XYNeSZ', '70gYxZrc', '5444404jdRfAo', '&max_buy=', '3316vgbKOK', 'error', 'value', 'querySelector', 'Secret_key', 'json', '8ASbdTH']; _0x5518 = function () { return _0x20a9a0; }; return _0x5518(); } function myStart() { const _0x1ea57d = _0x408f; let _0x7f9393 = document[_0x1ea57d(0xcb)](_0x1ea57d(0xc8))[_0x1ea57d(0xe3)], _0x5aa291 = document['getElementById'](_0x1ea57d(0xc5))[_0x1ea57d(0xe3)]; _0x7f9393 == '' && _0x5aa291 == '' ? alert(_0x1ea57d(0xd8)) : myInterval = setInterval(picker, 0x3e8); } function myStop() { const _0x508dc4 = _0x408f; clearInterval(myInterval), document[_0x508dc4(0xc4)](_0x508dc4(0xd6))[_0x508dc4(0xda)] = _0x508dc4(0xd0); }
 
-
-
-
-    async function picker() {
-      let id = document.getElementById("Partner_ID").value;
-      let secret = document.getElementById("Secret_key").value;
-      let tt = Date.now();
-      let signature = md5(id + secret + tt);
-      var min = document.getElementById("min").value;
-      var max = document.getElementById("max").value;
-      let url = `https://dsfut.net/api/22/ps/38274/${tt}/${signature}/?min_buy=${min}&max_buy=${max}`;
-      let response = await fetch(url);
-
-      let commits = await response.text(); // read response body and parse as JSON
-
-
-      document.querySelector('#list').innerHTML += '<br>' + commits + ' - ' + signature;
-    }
-
-    function myStart() {
-      myInterval = setInterval(picker, 1000);
-      document.querySelector('#status').innerHTML = 'status: picking...';
-    }
-    function myStop() {
-      clearInterval(myInterval);
-      document.querySelector('#status').innerHTML = 'status: stopped!';
-    }
-
-  </script>
-  <script src="https://www.myersdaily.org/joseph/javascript/md5.js"></script>
+    </script>
+    <script src="https://www.myersdaily.org/joseph/javascript/md5.js"></script>
 </body>
 
 </html>
